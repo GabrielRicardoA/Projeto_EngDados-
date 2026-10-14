@@ -1,0 +1,6 @@
+requests
+pymongo
+black
+dotenv
+sqlalchemy
+psycopg2-binary
