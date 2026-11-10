@@ -8,11 +8,11 @@ dados = dados.extract_pnadc() #retorna um df bronze da api cru msm
 print("Os dados foram extraidos com sucesso!")
 
 carregamento = Load()#carrega o df
-carregamento.load_mongo(dados,"IBGE","PNADC") #erro aqui neste metodo
+carregamento.load_mongo(dados,"IBGE","PNADC") #Carregameto para camada bronze
 print("Os dados foram carregados com sucesso!")
 
 dados = Transform()
-dados_silver = dados.trasnform_to_silver() #transforma o msm df em silver
+dados_silver = dados.trasnform_to_silver() #transforma o msm df_bronze em silver
 
 carga = Load()
 carga.load_neon(dados_silver,"Tabela_PNADC_silver") #recebe "df" e nome da tabela
