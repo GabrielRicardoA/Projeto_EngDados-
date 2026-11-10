@@ -1,6 +1,8 @@
 requests
 pymongo
 black
-dotenv
+python-dotenv
 sqlalchemy
 psycopg2-binary
+pandas
+certifi
